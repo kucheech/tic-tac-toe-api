@@ -11,6 +11,10 @@ describe('API', () => {
     {
       path: 'version',
       requestTypes: ['GET']
+    },
+    {
+      path: 'player',
+      requestTypes: ['POST']
     }
   ].forEach(route => {
     it(`should setup /${route.path} route`, () => {
