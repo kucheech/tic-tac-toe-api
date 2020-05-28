@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "tic-tac-toe-api-executor",
+    "name": "tic-tac-toe-api",
+    "region": "ap-southeast-1"
+  },
+  "api": {
+    "id": "9nvjwdpikb",
+    "module": "api"
+  }
+}

@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "db7f6628-dde9-45e5-a612-99625dcce8e4",
+		"name": "Tic-Tac-Toe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/{{stage}}/",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"{{stage}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/version",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/{{stage}}/version",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"{{stage}}",
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "tic-tac-toe-api",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe API",
+  "main": "api.js",
+  "scripts": {
+    "test": "node spec/support/jasmine-runner.js",
+    "coverage": "nyc npm test",
+    "coverage:codecov": "npm run coverage && nyc report --reporter=json && codecov -f coverage/*.json",
+    "deploy-test": "claudia update --profile claudia --version test"
+  },
+  "nyc": {
+    "exclude": [
+      "spec"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-api-builder": "^4.1.2",
+    "dynamodb": "^1.2.1",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "codecov": "^3.7.0",
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^5.0.2",
+    "nyc": "^15.0.1"
+  }
+}
