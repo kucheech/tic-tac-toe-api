@@ -1,5 +1,9 @@
 # Tic Tac Toe API
 
+## Source
+
+https://github.com/kucheech/tic-tac-toe-api
+
 ## Deployment
 
 The API is currently being deployed at \
@@ -12,10 +16,19 @@ GET /
 
 - To serve as a health check indicator of API
 
+All of the following will require an AWS API Gateway API key
+
 GET /version
 
 - Retrieve API version information
-- requires AWS API Gateway API key
+
+POST /session
+
+- create a session
+
+GET /sessions?type=<AWAIT_JOIN|COMPLETED>
+
+- retrieve list of sessions of a particular type
 
 ## Documentation
 
