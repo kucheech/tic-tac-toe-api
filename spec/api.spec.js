@@ -18,7 +18,7 @@ describe('API', () => {
     },
     {
       path: 'session',
-      requestTypes: ['POST']
+      requestTypes: ['POST', 'PUT']
     },
     {
       path: 'sessions',
