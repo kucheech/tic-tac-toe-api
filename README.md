@@ -22,9 +22,17 @@ GET /version
 
 - Retrieve API version information
 
+POST /player
+
+- create a player
+
 POST /session
 
 - create a session
+
+PUT /session
+
+- update a session
 
 GET /sessions?type=<AWAIT_JOIN|COMPLETED>
 
