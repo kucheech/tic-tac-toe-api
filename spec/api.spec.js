@@ -13,8 +13,12 @@ describe('API', () => {
       requestTypes: ['GET']
     },
     {
-      path: 'session',
+      path: 'player',
       requestTypes: ['POST']
+    },
+    {
+      path: 'session',
+      requestTypes: ['POST', 'PUT']
     },
     {
       path: 'sessions',

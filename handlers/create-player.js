@@ -16,7 +16,7 @@ const createPlayer = async request => {
             }
 
             if (player) {
-                resolve(player);
+                resolve(player.attrs);
             } else {
                 reject('Could not add player');
             }
