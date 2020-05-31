@@ -16,8 +16,7 @@ const Move = dynamo.define(tableName, {
     schema: {
         Id: dynamo.types.uuid(),
         SessionId: Joi.string(),
-        Player: Joi.string(),
-        Position: Joi.number()
+        Moves: Joi.array().items(Joi.object())
     },
 
     tableName

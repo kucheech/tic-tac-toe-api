@@ -2,18 +2,17 @@
 
 const Session = require('../models/Session');
 const { validateRequest } = require('./util');
-const { PENDING, WAITING_FOR } = require('../data/constants');
+const { AWAIT_JOIN } = require('../data/constants');
 
 const createSession = async request => {
-    const { player_x: Player_X, player_o: Player_O, error } = await validateRequest(request, undefined, [{ name: 'player_x', type: 'string' }, { name: 'player_o', type: 'string' }]);
+    const { player_x: Player_X, error } = await validateRequest(request, undefined, [{ name: 'player_x', type: 'object' }]);
     if (error) {
         return Promise.reject(error);
     }
 
     const new_session = {
         Player_X,
-        Player_O,
-        Status: WAITING_FOR(Player_X === PENDING ? 'X' : 'O')
+        Status: AWAIT_JOIN
     };
 
     return new Promise((resolve, reject) => {
@@ -23,7 +22,7 @@ const createSession = async request => {
             }
 
             if (session) {
-                resolve(session);
+                resolve(session.attrs);
             } else {
                 reject('Could not create session');
             }

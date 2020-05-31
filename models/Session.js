@@ -15,8 +15,8 @@ const Session = dynamo.define(tableName, {
 
     schema: {
         Id: dynamo.types.uuid(),
-        Player_X: Joi.string(),
-        Player_O: Joi.string(),
+        Player_X: Joi.object(),
+        Player_O: Joi.object(),
         Status: Joi.string()
     },
 
