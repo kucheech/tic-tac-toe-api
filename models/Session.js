@@ -9,7 +9,6 @@ const tableName = 'Session';
 
 const Session = dynamo.define(tableName, {
     hashKey: 'Id',
-    rangeKey: 'Status',
 
     timestamps: true,
 

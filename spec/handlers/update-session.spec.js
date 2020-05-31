@@ -2,7 +2,7 @@
 
 const underTest = require('../../handlers/update-session');
 const { MISSING_PARAMETER, MISSING_OR_INVALID_VALUE, NULL_REQUEST } = require('../../data/errorMessages');
-const { IN_PROGRESS } = require('../../data/constants');
+const { AWAIT_JOIN, IN_PROGRESS, COMPLETED } = require('../../data/constants');
 
 describe('Update session', () => {
   it(`should reject with a ${NULL_REQUEST} error for null request`, async () => {
@@ -33,6 +33,6 @@ describe('Update session', () => {
   });
 
   it('should resolve for valid request', async () => {
-    await expectAsync(underTest({ body: { id: 'test-dummy-id', status: IN_PROGRESS } })).toBeResolved();
+    await expectAsync(underTest({ body: { id: 'test-dummy-id', status: AWAIT_JOIN } })).toBeResolved();
   });
 });

@@ -8,6 +8,7 @@ const PLAYER_O = PLAYER('O');
 const WAITING_FOR = p => `Waiting for ${PLAYER(p)}`;
 const AWAIT_JOIN = 'AWAIT_JOIN';
 const IN_PROGRESS = 'IN_PROGRESS';
+const COMPLETED = 'COMPLETED';
 const GAME_OVER = 'GAME_OVER';
 
 module.exports = {
